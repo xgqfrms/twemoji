@@ -1,8 +1,8 @@
-# Twitter Emoji (Twemoji) [![Build Status](https://travis-ci.org/twitter/twemoji.svg?branch=gh-pages)](https://travis-ci.org/twitter/twemoji)
+# 推特 Emoji (Twemoji) [![Build Status](https://travis-ci.org/twitter/twemoji.svg?branch=gh-pages)](https://travis-ci.org/twitter/twemoji)
 
 A simple library that provides standard Unicode [emoji](http://en.wikipedia.org/wiki/Emoji) support across all platforms.
 
-## CDN Support
+## CDN 支持
 
 The folks over at [MaxCDN](https://www.maxcdn.com) graciously provide CDN support. 
 
@@ -32,7 +32,7 @@ Each of them accept a callback to generate each image source or an options objec
 
 Here is a walk through all parsing possibilities:
 
-##### string parsing
+##### 字符串解析
 Given a generic string, it will replace all emoji with an `<img>` tag.
 
 While this can be used to inject via `innerHTML` emoji image tags, please note that this method does not sanitize the string or prevent malicious code from being executed. As an example, if the text contains a `<script>` tag, this **will not** be converted into `&lt;script&gt;` since it's out of this method scope to prevent these kind of attacks.
@@ -121,7 +121,7 @@ I <img
 */
 ```
 
-##### DOM parsing
+##### DOM 解析
 
 Differently from `string` parsing, if the first argument is a `HTMLElement` generated image tags will replace emoji that are **inside `#text` node only** without compromising surrounding nodes or listeners, and avoiding completely the usage of `innerHTML`.
 
@@ -164,7 +164,7 @@ Here the list of properties accepted by the optional object that could be passed
   }
 ```
 
-##### callback
+##### 回调
 The function to invoke in order to generate images `src`.
 
 By default it is a function like the following one:
@@ -180,7 +180,7 @@ function imageSourceGenerator(icon, options) {
 }
 ```
 
-##### attributes
+##### 属性
 The function to invoke in order to generate additional, custom attributes for the image tag.
 
 By default it is a function like the following one:
@@ -242,7 +242,7 @@ img.emoji {
 
 This will make sure emoji derive their width and height from the `font-size` of the text they're shown with. It also adds just a little bit of space before and after each emoji, and pulls them upwards a little bit for better optical alignment.
 
-#### UTF-8 Character Set
+#### UTF-8 编码集
 
 To properly support emoji, the document character must be set to UTF-8. This can done by including the following meta tag in the document `<head>`
 
@@ -285,11 +285,11 @@ As an open source project, attribution is critical from a legal, practical and m
 
 However, we consider the guide a bit onerous and as a project, will accept a mention in a project README or an 'About' section or footer on a website. In mobile applications, a common place would be in the Settings/About section (for example, see the mobile Twitter application Settings->About->Legal section). We would consider a mention in the HTML/JS source sufficient also.
 
-## Community Projects
+## 社区项目
 
 * [Twemoji Awesome](http://ellekasai.github.io/twemoji-awesome/) by [@ellekasai](https://twitter.com/ellekasai/status/531979044036698112): Use Twemoji using CSS classes (like [Font Awesome](http://fortawesome.github.io/Font-Awesome/))
 
-## Committers and Contributors
+## 提交者 and 贡献者
 * Andrea Giammarchi (ex-Twitter)
 * Chris Aniszczyk (Twitter)
 * Tom Wuttke (Twitter)
@@ -302,7 +302,7 @@ The rules for contributing are available at `CONTRIBUTING.md` file.
 
 Thank you to all of our [contributors](https://github.com/twitter/twemoji/graphs/contributors).
 
-## License
+## 授权许可协议
 Copyright 2014 Twitter, Inc and other contributors
 
 Code licensed under the MIT License: http://opensource.org/licenses/MIT
